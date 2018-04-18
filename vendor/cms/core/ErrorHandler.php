@@ -13,11 +13,12 @@ class ErrorHandler
         }else{
             error_reporting(0);
         }
-        set_exception_handler($this,'exceptionHandler');
+        set_exception_handler([$this,'exceptionHandler']);
     }
 
     public function exceptionHandler($exception){
-        $this->logErrors($exception->getMass(),$exception->getFile(),$exception->getLine());
+        $this->logErrors($exception->getMessage(), $exception->getFile(), $exception->getLine());
+        $this->showErrors('Exception', $exception->getMessage(), $exception->getFile(), $exception->getLine(), $exception->getCode());
     }
 
     /**

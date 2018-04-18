@@ -3,6 +3,8 @@
 namespace core;
 
 
+use cms\core\Router;
+
 class App
 {
 
@@ -14,6 +16,8 @@ class App
         session_start();
         self::$app = Registry::instance();
         $this->getParams();
+        new ErrorHandler();
+        Router::dispatch($query);
     }
 
     protected function getParams(){

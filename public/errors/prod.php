@@ -1,7 +1,12 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Seliv
- * Date: 18.04.2018
- * Time: 1:35
- */
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ошибка</title>
+</head>
+<body>
+
+<h1>Произошла ошибка</h1>
+
+</body>
+</html>
